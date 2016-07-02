@@ -1,7 +1,7 @@
 'use strict';
 
-const HTTPS = require('https');
-const BotId = process.env.BOT_ID;
+var HTTPS = require('https');
+var BotId = process.env.BOT_ID;
 
 class CoachBot {
 	constructor() {
