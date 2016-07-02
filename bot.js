@@ -18,6 +18,13 @@ function respond() {
   }
 }
 
+function getImage() {
+	return [{
+		"type" : "image",
+		"url" : "http://www.quickmeme.com/img/ce/cef9621297cfc2ca2af91e452d0b86d5e9fee60cd151615cfc5fa074185006f9.jpg"
+	}]
+}
+
 function postMessage() {
   var botResponse, options, body, botReq;
 
@@ -31,7 +38,8 @@ function postMessage() {
 
   body = {
     "bot_id" : botID,
-    "text" : botResponse
+    "text" : botResponse,
+	  "attachments" : getImage()
   };
 
   console.log('sending ' + botResponse + ' to ' + botID);
