@@ -5,9 +5,13 @@ director    = require('director');
 cool        = require('cool-ascii-faces');
 bot         = require('./bot.js');
 
+myBot = new bot();
+
+console.log(myBot.respond);
+
 router = new director.http.Router({
   '/' : {
-    post: bot.respond,
+    post: myBot.respond,
     get: ping
   }
 });
@@ -28,6 +32,7 @@ port = Number(process.env.PORT || 5000);
 server.listen(port);
 
 function ping() {
+	console.log('PING');
   this.res.writeHead(200);
   this.res.end("Hey, I'm Cool Guy.");
 }
