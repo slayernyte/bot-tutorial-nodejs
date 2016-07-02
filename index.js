@@ -5,13 +5,12 @@ director    = require('director');
 cool        = require('cool-ascii-faces');
 bot         = require('./bot.js');
 
-myBot = new bot();
 
 console.log(myBot.respond);
 
 router = new director.http.Router({
   '/' : {
-    post: myBot.respond,
+    post: bot.respond,
     get: ping
   }
 });
