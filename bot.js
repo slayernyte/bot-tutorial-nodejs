@@ -5,7 +5,7 @@ const BotId = process.env.BOT_ID;
 
 class CoachBot {
 	constructor() {
-		console.log('new coah bot called', console.log(arguments));
+		console.log('new coah bot called');
 		this.tests = [
 			{
 				textTest : /quickie|quick/gi,
@@ -44,12 +44,16 @@ class CoachBot {
 	respond() {
 		var request = JSON.parse(this.req.chunks[0]);
 		console.log(request);
-		this.res.writeHead(200);
 		if (request.text) {
+			this.res.writeHead(200);
 			this._checkText(request.text);
+			this.res.end();
+		} else {
+			console.log("don't care");
+			this.res.writeHead(200);
+			this.res.end();
+
 		}
-		// postMessage();
-		this.res.end();
 	}
 	
 	_checkText(text) {
