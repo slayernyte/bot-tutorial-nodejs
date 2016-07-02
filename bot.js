@@ -37,6 +37,7 @@ const tests = [
 ];
 
 function respond() {
+	console.log(this);
 		var request = JSON.parse(this.req.chunks[0]);
 		console.log(request);
 		if (request.text) {
@@ -103,7 +104,7 @@ function respond() {
 
 		botReq.end(JSON.stringify(body));
 	};
-	
 
 
-module.exports = respond;
+
+exports.respond = respond;
