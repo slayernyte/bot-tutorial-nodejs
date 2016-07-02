@@ -6,8 +6,6 @@ cool        = require('cool-ascii-faces');
 bot         = require('./bot.js');
 
 
-console.log(myBot.respond);
-
 router = new director.http.Router({
   '/' : {
     post: bot.respond,
