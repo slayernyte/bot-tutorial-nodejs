@@ -56,6 +56,7 @@ class CoachBot {
 		let matchFound;
 		
 		this.tests.forEach((item, idx) => {
+			console.log(item.textTest.test(text));
 			if (item.textTest.test(text)) {
 				matchFound = item.response;
 			}
