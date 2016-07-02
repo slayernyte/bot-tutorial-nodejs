@@ -1,7 +1,7 @@
 'use strict';
 
-var HTTPS = require('https');
-var BotId = process.env.BOT_ID;
+const HTTPS = require('https');
+const BotId = process.env.BOT_ID;
 
 class CoachBot {
 	constructor() {
@@ -9,8 +9,11 @@ class CoachBot {
 	}
 
 	respond() {
-		console.log(this);
-		console.log(arguments);
+		var request = JSON.parse(this.req.chunks[0]);
+		console.log(request);
+		this.res.writeHead(200);
+		// postMessage();
+		this.res.end();
 	}
 }
 
