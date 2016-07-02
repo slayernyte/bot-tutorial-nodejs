@@ -5,13 +5,11 @@ director    = require('director');
 cool        = require('cool-ascii-faces');
 bot         = require('./bot.js');
 
-console.log(bot.respond);
 
 router = new director.http.Router({
   '/' : {
     post: bot.respond,
-    get: ping,
-	  put : ping
+    get: ping
   }
 });
 
@@ -27,7 +25,7 @@ server = http.createServer(function (req, res) {
   });
 });
 
-port = Number(process.env.PORT || 3333);
+port = Number(process.env.PORT || 8080);
 server.listen(port, 'localhost', function () {
 	console.log("... port %d in %s mode", server.address().port, port);
 });
