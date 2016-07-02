@@ -37,9 +37,9 @@ const tests = [
 ];
 
 function respond() {
-	console.log(this);
+	// console.log(this);
 		var request = JSON.parse(this.req.chunks[0]);
-		console.log(this.req);
+		console.log('REQ:::::::::' + this.req);
 		if (request.text) {
 			this.res.writeHead(200);
 			_checkText(request.text);
@@ -56,7 +56,7 @@ function respond() {
 		let matchFound;
 		
 		tests.forEach((item, idx) => {
-			console.log(item.textTest.test(text));
+			// console.log(item.textTest.test(text));
 			if (item.textTest.test(text)) {
 				matchFound = item.response;
 			}
@@ -84,7 +84,7 @@ function respond() {
 			'attachments' : msg.attachments
 		};
 
-		console.log('sending' , body);
+		// console.log('sending' , body);
 
 		botReq = HTTPS.request(options, function (res) {
 			if (res.statusCode == 202) {
