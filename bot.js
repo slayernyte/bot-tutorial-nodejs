@@ -42,7 +42,7 @@ function respond() {
 		console.log(request);
 		if (request.text) {
 			this.res.writeHead(200);
-			this._checkText(request.text);
+			_checkText(request.text);
 			this.res.end();
 		} else {
 			console.log("don't care");
