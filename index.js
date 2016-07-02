@@ -25,13 +25,10 @@ server = http.createServer(function (req, res) {
   });
 });
 
-port = Number(process.env.PORT || 8080);
-server.listen(port, 'localhost', function () {
-	console.log("... port %d in %s mode", server.address().port, port);
-});
+port = Number(process.env.PORT || 5000);
+server.listen(port);
 
 function ping() {
-	console.log('PING');
   this.res.writeHead(200);
   this.res.end("Hey, I'm Cool Guy.");
 }
