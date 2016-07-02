@@ -3,13 +3,14 @@ var http, director, cool, bot, router, server, port;
 http        = require('http');
 director    = require('director');
 cool        = require('cool-ascii-faces');
-bot         = require('./bot.js');
+bot         = require('./bot-a.js');
 
-myBot = new bot();
+// myBot = new bot();
 
 router = new director.http.Router({
   '/' : {
-    post: myBot.respond,
+    post: bot.respond,
+    // post: myBot.respond,
     get: ping
   }
 });
