@@ -39,7 +39,6 @@ const tests = [
 function respond() {
 	// console.log(this);
 		var request = JSON.parse(this.req.chunks[0]);
-		console.log('REQ:::::::::' + JSON.stringify(this.req));
 		if (request.text) {
 			this.res.writeHead(200);
 			_checkText(request.text);
