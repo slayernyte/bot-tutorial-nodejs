@@ -1,10 +1,11 @@
 'use strict';
 
 const HTTPS = require('https');
-const BotId = process.env.BOT_ID;
+// const BotID = process.env.BOT_ID || '1d454036521af47eb3ee088b8c';
+const BotID = '1d454036521af47eb3ee088b8c';
 const tests = [
 	{
-		textTest : /quickie|quick/gi,
+		textTest : new RegExp(/quickie|quick/, 'gi'),
 		response : {
 			text : '',
 			attachments : [
@@ -16,7 +17,7 @@ const tests = [
 		}
 	},
 	{
-		textTest : /sharks/gi,
+		textTest : new RegExp(/sharks/, 'gi'),
 		response : {
 			text : '',
 			attachments : [
@@ -28,7 +29,7 @@ const tests = [
 		}
 	},
 	{
-		textTest : /kings/gi,
+		textTest : new RegExp(/kings/, 'gi'),
 		response : {
 			text : 'go kings go',
 			attachments : []
@@ -78,7 +79,7 @@ function respond() {
 		};
 
 		body = {
-			'bot_id' : botID,
+			'bot_id' : BotID,
 			'text' : msg.text,
 			'attachments' : msg.attachments
 		};
