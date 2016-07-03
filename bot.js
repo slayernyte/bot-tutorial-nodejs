@@ -41,6 +41,18 @@ const tests = [
 		}
 	},
 	{
+		textTest : new RegExp(/ducks/, 'gi'),
+		response : {
+			text : '',
+			attachments : [
+				{
+					'type' : 'image',
+					'url' : 'https://s-media-cache-ak0.pinimg.com/236x/d8/0c/a8/d80ca843b6a52f2a2cde10a5a71f4090.jpg'
+				}
+			]
+		}
+	},
+	{
 		textTest : new RegExp(/carter/, 'gi'),
 		response : {
 			text : 'Laaaaaaazzzzyyyy',
