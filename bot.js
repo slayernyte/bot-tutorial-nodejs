@@ -29,6 +29,32 @@ const tests = [
 		}
 	},
 	{
+		textTest : new RegExp(/teddy|purcell/, 'gi'),
+		response : {
+			text : '',
+			attachments : [
+				{
+					'type' : 'image',
+					'url' : 'https://cdn.meme.am/instances/500x/41325779.jpg'
+				}
+			]
+		}
+	},
+	{
+		textTest : new RegExp(/carter/, 'gi'),
+		response : {
+			text : 'Laaaaaaazzzzyyyy',
+			attachments : []
+		}
+	},
+	{
+		textTest : new RegExp(/series|playoffs/, 'gi'),
+		response : {
+			text : 'The team that wins 4 games is going to win the series',
+			attachments : []
+		}
+	},
+	{
 		textTest : new RegExp(/kings/, 'gi'),
 		response : {
 			text : 'go kings go',
@@ -36,6 +62,10 @@ const tests = [
 		}
 	}
 ];
+//http://theroyalhalf.com/wp-content/uploads/2013/09/Darryl-Sutter-Fist-Pump-LA-Kings.gif
+// The team that wins 4 games is going to win the series
+//http://l2.yimg.com/bt/api/res/1.2/miYbeafoL3L2LHQIgvb1qw--/YXBwaWQ9eW5ld3NfbGVnbztpbD1wbGFuZTtxPTc1O3c9NjAw/http://media.zenfs.com/en/person/Ysports/teddy-purcell-hockey-headshot-photo.jpg
+
 
 function respond() {
 	// console.log(this);
