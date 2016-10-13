@@ -1,8 +1,8 @@
 'use strict';
 
 const HTTPS = require('https');
-// const BotID = process.env.BOT_ID || '1d454036521af47eb3ee088b8c';
-const BotID = '1d454036521af47eb3ee088b8c';
+// console.log(process.env.BOT_ID);
+const BotID = process.env.BOT_ID;
 const tests = [
 	{
 		textTest : new RegExp(/quickie|quick/, 'gi'),
@@ -48,6 +48,18 @@ const tests = [
 				{
 					'type' : 'image',
 					'url' : 'https://s-media-cache-ak0.pinimg.com/236x/d8/0c/a8/d80ca843b6a52f2a2cde10a5a71f4090.jpg'
+				}
+			]
+		}
+	},
+	{
+		textTest : new RegExp(/getzlaf/, 'gi'),
+		response : {
+			text : '',
+			attachments : [
+				{
+					'type' : 'image',
+					'url' : 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/13754381_1164387860249406_921839340831606062_n.jpg?oh=ffe9f3e05516c13ac4132affa3fc879c&oe=58A96F33'
 				}
 			]
 		}
