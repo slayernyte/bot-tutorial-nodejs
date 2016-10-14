@@ -1,8 +1,16 @@
 'use strict';
 
 const HTTPS = require('https');
-// console.log(process.env.BOT_ID);
+console.log(process.env.BOT_ID);
 const BotID = process.env.BOT_ID;
+
+function getRandomInt(min, max) {
+	min = Math.ceil(min);
+	max = Math.floor(max);
+	return Math.floor(Math.random() * (max - min)) + min;
+}
+
+
 const tests = [
 	{
 		textTest : new RegExp(/quickie|quick/, 'gi'),
@@ -84,6 +92,17 @@ const tests = [
 			text : 'go kings go',
 			attachments : []
 		}
+	},
+	{
+		textTest : new RegExp(/amber/, 'gi'),
+		response : {
+			text : [
+				'1',
+				'2',
+				'3'
+			],
+			attachments : []
+		}
 	}
 ];
 //http://theroyalhalf.com/wp-content/uploads/2013/09/Darryl-Sutter-Fist-Pump-LA-Kings.gif
@@ -134,7 +153,7 @@ function respond() {
 
 		body = {
 			'bot_id' : BotID,
-			'text' : msg.text,
+			'text' : typeof(msg.text) === 'string' ? msg.text : msg.text[getRandomInt(0, msg.text.length)],
 			'attachments' : msg.attachments
 		};
 
