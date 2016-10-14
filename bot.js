@@ -1,7 +1,6 @@
 'use strict';
 
 const HTTPS = require('https');
-console.log(process.env.BOT_ID);
 const BotID = process.env.BOT_ID;
 
 function getRandomInt(min, max) {
@@ -68,6 +67,18 @@ const tests = [
 				{
 					'type' : 'image',
 					'url' : 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/13754381_1164387860249406_921839340831606062_n.jpg?oh=ffe9f3e05516c13ac4132affa3fc879c&oe=58A96F33'
+				}
+			]
+		}
+	},
+	{
+		textTest : new RegExp(/sutter/, 'gi'),
+		response : {
+			text : '',
+			attachments : [
+				{
+					'type' : 'image',
+					'url' : 'https://www.instagram.com/p/BKD2V46j22F/'
 				}
 			]
 		}
