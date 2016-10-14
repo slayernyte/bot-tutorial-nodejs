@@ -72,18 +72,6 @@ const tests = [
 		}
 	},
 	{
-		textTest : new RegExp(/sutter/, 'gi'),
-		response : {
-			text : '',
-			attachments : [
-				{
-					'type' : 'image',
-					'url' : 'https://www.instagram.com/p/BKD2V46j22F/'
-				}
-			]
-		}
-	},
-	{
 		textTest : new RegExp(/carter/, 'gi'),
 		response : {
 			text : 'Laaaaaaazzzzyyyy',
@@ -103,7 +91,7 @@ const tests = [
 			text : 'go kings go',
 			attachments : []
 		}
-	},
+	}/*,
 	{
 		textTest : new RegExp(/amber/, 'gi'),
 		response : {
@@ -114,7 +102,7 @@ const tests = [
 			],
 			attachments : []
 		}
-	}
+	}*/
 ];
 //http://theroyalhalf.com/wp-content/uploads/2013/09/Darryl-Sutter-Fist-Pump-LA-Kings.gif
 // The team that wins 4 games is going to win the series
