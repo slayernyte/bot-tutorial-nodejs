@@ -74,7 +74,7 @@ const tests = [
 	{
 		textTest : new RegExp(/carter/, 'gi'),
 		response : {
-			text : 'Laaaaaaazzzzyyyy',
+			text : '"A complacent player is a lazy player, and a lazy player is a loser."',
 			attachments : []
 		}
 	},
@@ -84,25 +84,25 @@ const tests = [
 			text : 'The team that wins 4 games is going to win the series',
 			attachments : []
 		}
-	},
+	}/*,
 	{
 		textTest : new RegExp(/kings/, 'gi'),
 		response : {
 			text : 'go kings go',
 			attachments : []
 		}
-	}/*,
+	}*/,
 	{
-		textTest : new RegExp(/amber/, 'gi'),
+		textTest : new RegExp(/kings/, 'gi'),
 		response : {
 			text : [
-				'1',
-				'2',
-				'3'
+				'“Work your ass off. Then you get a chance to play again. If you don’t, you don’t. It’s pretty clear.”',
+				'"I may not know much but I can count."',
+				'"It has not been a good day. I lost my glasses early this morning and I had to go buy a pair of 79 dollar reading glasses today. 79 bucks. You can literally get them at Costco, three-for-20."'
 			],
 			attachments : []
 		}
-	}*/
+	}
 ];
 //http://theroyalhalf.com/wp-content/uploads/2013/09/Darryl-Sutter-Fist-Pump-LA-Kings.gif
 // The team that wins 4 games is going to win the series
